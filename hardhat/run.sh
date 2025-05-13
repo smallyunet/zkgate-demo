@@ -9,7 +9,8 @@ npx hardhat run scripts/deploy.js \
 
 # Set environment variables for RPC URL and registry address
 export RPC_URL="http://127.0.0.1:8545"
-export REGISTRY="0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9"
+export REGISTRY="0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+export SIGNER_PRIVATE_KEY="0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
 
 # Check the off-chain proof validity
 node scripts/checkOffchainProof.js
@@ -27,7 +28,7 @@ npx hardhat run scripts/prove.js \
   --network local
 
 # Generate a fake proof for testing purposes
-npx hardhat run scripts/fakeProof.js \
+npx hardhat run scripts/fakeProofWithBadRoot.js \
   --network local
 
 # Generate a fake proof with the correct root for testing

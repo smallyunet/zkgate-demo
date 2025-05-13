@@ -24,4 +24,4 @@ template SparseMerkleInclusion(nLevels) {
 }
 
 // Here is the only change: mark `root` public
-component main { public [ root ] } = SparseMerkleInclusion(20);
+component main { public [ root, key ] } = SparseMerkleInclusion(20);
